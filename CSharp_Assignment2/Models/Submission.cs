@@ -42,7 +42,7 @@ namespace CSharp_Assignment2.Models
             Stream stream;
             try
             {
-                stream = File.Open(PATH, FileMode.Create);
+                stream = File.Open(PATH, FileMode.Append);
                 BinaryFormatter bf = new BinaryFormatter();
 
                 bf.Serialize(stream, obj);
@@ -55,7 +55,7 @@ namespace CSharp_Assignment2.Models
             }
         }
 
-        private ICollection<Submission> ReadSubmissionsFromFile(string Path)
+        public static ICollection<Submission> ReadSubmissionsFromFile(string Path)
         {
             Stream stream = File.Open(Path, FileMode.Open);
             BinaryFormatter bf = new BinaryFormatter();
@@ -68,6 +68,7 @@ namespace CSharp_Assignment2.Models
                 list.Add(deserialized);
             }
             //return the list of objects
+            stream.Close();
             return list;
         }
 
@@ -83,7 +84,7 @@ namespace CSharp_Assignment2.Models
         public Submission(SerializationInfo info, StreamingContext context)
         {
             FirstName = (string)info.GetValue("FirstName", typeof(string));
-            Surname = (string)info.GetValue("SurNanm", typeof(string));
+            Surname = (string)info.GetValue("Surname", typeof(string));
             Email = (string)info.GetValue("Email", typeof(string));
             Phonenumber = (int)info.GetValue("Phonenumber", typeof(int));
             DOB = (DateTime)info.GetValue("DOB", typeof(DateTime));

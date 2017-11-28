@@ -4,7 +4,7 @@
     ViewData["Title"] = "Signup Page";
     Layout = "_Layout";
 }
-@{//todo Clean up this code}
+@*{//todo Clean up this code}*@
 <div >@*<form method="post" , asp-controller="Signup" asp-action="index">
     <div asp-validation-summary="All"></div>
 
@@ -192,7 +192,7 @@
             @* DOB (insert:type="date")*@
             <label asp-for="DOB">
                 Date of Birth
-                <input asp-for="DOB" />
+                <input asp-for="DOB" type="date" />
                 <span asp-validation-for="DOB"></span>
             </label>
         </div>
