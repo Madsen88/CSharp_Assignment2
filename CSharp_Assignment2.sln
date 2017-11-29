@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp_Assignment2", "CSharp_Assignment2\CSharp_Assignment2.csproj", "{7627F978-1683-433F-BE37-04C12A5DE288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp_Assignment2", "CSharp_Assignment2\CSharp_Assignment2.csproj", "{7627F978-1683-433F-BE37-04C12A5DE288}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyClassLibrary", "MyClassLibrary\MyClassLibrary.csproj", "{981B6B2B-4316-4B20-A51E-AC127B33C14D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7627F978-1683-433F-BE37-04C12A5DE288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7627F978-1683-433F-BE37-04C12A5DE288}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7627F978-1683-433F-BE37-04C12A5DE288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981B6B2B-4316-4B20-A51E-AC127B33C14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981B6B2B-4316-4B20-A51E-AC127B33C14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981B6B2B-4316-4B20-A51E-AC127B33C14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981B6B2B-4316-4B20-A51E-AC127B33C14D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
