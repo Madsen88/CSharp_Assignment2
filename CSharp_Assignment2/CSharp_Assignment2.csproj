@@ -6,9 +6,13 @@
 
   <ItemGroup>
     <Compile Remove="Pages\**" />
+    <Compile Remove="ViewModel\**" />
     <Content Remove="Pages\**" />
+    <Content Remove="ViewModel\**" />
     <EmbeddedResource Remove="Pages\**" />
+    <EmbeddedResource Remove="ViewModel\**" />
     <None Remove="Pages\**" />
+    <None Remove="ViewModel\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,10 +26,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyClassLibrary\MyClassLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 
 </Project>

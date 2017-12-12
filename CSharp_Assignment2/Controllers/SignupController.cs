@@ -22,8 +22,8 @@ namespace CSharp_Assignment2.Controllers
             
             var user = new Submission(signup.FirstName, signup.Surname, signup.Email, signup.Phonenumber, signup.DOB,
                 signup.SerialNumber);
-
-            return Content(user.ToString());
+            ViewBag["user"] = user;
+            return RedirectToAction("SuccessfullSignupView");
         }
 
         public IActionResult test()

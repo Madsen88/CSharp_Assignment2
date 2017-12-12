@@ -37,9 +37,9 @@ namespace CSharp_Assignment2.Models
 
         }
 
-        private IsTheKeyUsedForAnotherSubmission()
+        private void IsTheKeyUsedForAnotherSubmission()
         {
-
+            // Not implemented yet
         }
     }
 }
