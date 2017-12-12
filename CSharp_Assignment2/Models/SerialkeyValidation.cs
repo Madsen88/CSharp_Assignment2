@@ -23,7 +23,8 @@ namespace CSharp_Assignment2.Models
             {
                 //Testing purposes
                 var isitvalid = !_SerialkeyList.Contains(value);
-                if (isitvalid)
+                var isitused = IsTheKeyUsedForAnotherSubmission(value);
+                if (isitvalid || isitused)
                     return new ValidationResult(ErrorMessage);
             }
             return ValidationResult.Success;
@@ -37,9 +38,15 @@ namespace CSharp_Assignment2.Models
 
         }
 
-        private void IsTheKeyUsedForAnotherSubmission()
+        private bool IsTheKeyUsedForAnotherSubmission(Object key)
         {
-            // Not implemented yet
+            var subList = Submission.ReadSubmissionsFromFile(Submission.PATH);
+            foreach (Submission sub in subList)
+            {
+                if (sub.SerialNumber == (String)key)
+                    return true;
+            }
+            return false;
         }
     }
 }

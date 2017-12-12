@@ -22,18 +22,13 @@ namespace CSharp_Assignment2.Controllers
             
             var user = new Submission(signup.FirstName, signup.Surname, signup.Email, signup.Phonenumber, signup.DOB,
                 signup.SerialNumber);
-            ViewBag["user"] = user;
-            return RedirectToAction("SuccessfullSignupView");
+            user.SaveSubmissionToFile(user);
+            return RedirectToAction("SuccesfullSignup");
         }
 
-        public IActionResult test()
+        public IActionResult SuccesfullSignup()
         {
-            var list = Submission.ReadSubmissionsFromFile(@"Models\Submissions.txt");
-            var sb = new StringBuilder();
-            sb.Append(Environment.NewLine);
-            foreach (var item in list)
-                sb.Append(item + Environment.NewLine);
-            return Content(sb.ToString());
+            return View();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace CSharp_Assignment2.Models
     [Serializable]
     public class Submission : ISerializable
     {
-        private const string PATH = @"Models\Submissions.txt";
+        public const string PATH = @"MyClassLibrary\Submissions.txt";
         
         public string FirstName { get; set; }
         public string Surname { get; set; }
@@ -28,8 +28,6 @@ namespace CSharp_Assignment2.Models
             Phonenumber = phonenumber;
             DOB = dob.Date;
             SerialNumber = serialnumber;
-            //Todo Move this to a model
-            SaveSubmissionToFile(this);
         }
 
         public Submission(SerializationInfo info, StreamingContext context)
@@ -60,7 +58,7 @@ namespace CSharp_Assignment2.Models
                 $"{nameof(FirstName)}: {FirstName}, {nameof(Surname)}: {Surname}, {nameof(Email)}: {Email}, {nameof(Phonenumber)}: {Phonenumber}, {nameof(DOB)}: {DOB}, {nameof(SerialNumber)}: {SerialNumber}";
         }
 
-        private void SaveSubmissionToFile(Submission obj)
+        public void SaveSubmissionToFile(Submission obj)
         {
             Stream stream;
             try
